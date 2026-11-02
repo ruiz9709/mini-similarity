@@ -1,0 +1,17 @@
+{
+  "name": "mini-similarity",
+  "version": "0.1.0",
+  "description": "Tiny zero-dependency string similarity for fuzzy matching of short strings: Levenshtein distance and similarity, plus Jaro and Jaro-Winkler scores.",
+  "type": "module",
+  "main": "src/index.js",
+  "exports": "./src/index.js",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node --test"
+  },
+  "keywords": [],
+  "license": "BSD-3-Clause",
+  "dependencies": {}
+}
