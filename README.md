@@ -39,3 +39,10 @@ All functions throw `TypeError` if given a non-string argument.
 - Empty vs non-empty is `0` for Jaro/Jaro-Winkler and for `levenshteinSimilarity`.
 - `jaroWinkler` applies the prefix bonus only when Jaro is non-zero, so two strings with no matching characters score exactly `0`.
 - Comparison is by UTF-16 code unit. `'\u00e9'` (e-acute) and `'e' + '\u0301'` (e plus combining acute) are different strings to this library.
+
+## Performance
+
+The window keeps a bounded buffer, so `push` is constant time and memory does not
+grow with the length of the stream. `peak` and `trough` are linear in the window
+size, which is the trade that keeps `push` cheap.
+
